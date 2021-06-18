@@ -2,3 +2,28 @@
   box-sizing: border-box;
   text-align: center;
 }
+.primary {
+  padding-top: 25px;
+}
+.form {
+  padding-top: 25px;
+}
+.rad {
+  padding-top: 25px;
+}
+.toppingsArea {
+  padding-top: 45px;
+}
+.toppingsOptions {
+  padding-top: 25px;
+}
+.submit {
+  padding: 25px 25px;
+  border: none;
+}
+.again {
+  border: none;
+}
+#results {
+  display: none;
+}

@@ -26,6 +26,7 @@
           <h3>Let's start with a SIZE...</h3>
           <h5>select your size below:</h5>
         <form id="pizzaForm">
+          <div class="rad">
         <div class="form-check-inline">
           <input
             class="form-check-input" type="radio" name="size" id="radMed" value="medium" checked/>
@@ -42,9 +43,11 @@
           <label class="form-check-label" for="radFam">Family</label>
         </div>
         </div>
+        </div>
         <div class="toppingsArea">
           <h3>Now let's choose some "toppings"!</h3>
-          <h5>Don't hold back!  You can totally afford this...</h5>
+          <h6>Don't hold back!  You can totally afford this...</h6>
+          <div class="toppingsOptions">
           <div class="form-check">
             <input class="form-check-input" type="checkbox" name="top" value="100" id="t1"/>
             <label class="form-check-label" for="t1"> Pepperoni </label>
@@ -110,7 +113,8 @@
             <label class="form-check-label" for="t16"> EVEN MORE SAUCE </label>
           </div>
         </div>
-        <button type="submit" class="btn-primary submit"></button>
+        </div>
+        <button type="submit" class="submit">Show me the damage!</button>
         </form>
       </div>
     </div>
