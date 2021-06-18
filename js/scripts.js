@@ -50,5 +50,6 @@ $(document).ready(function () {
     $(".rsButton").fadeOut();
     $(".jumbotron").fadeIn();
     $("#pizzaForm")[0].reset();
+    $(".submit").fadeIn();
   });
 });
