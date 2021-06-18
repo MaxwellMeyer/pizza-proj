@@ -42,6 +42,7 @@ $(document).ready(function () {
     $("#results").fadeIn();
     $(".jumbotron").fadeOut();
     $(".rsButton").fadeIn();
+    $(".submit").fadeOut();
   });
   $(".again").click(function (event) {
     event.preventDefault();
