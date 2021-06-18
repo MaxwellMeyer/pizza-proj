@@ -3,11 +3,11 @@ function Pizza(price, toppings, size) {
   this.toppings = toppings;
   this.size = size;
 }
-Pizza.prototype.size = function() {
+Pizza.prototype.size = function () {
   let pizzaSize = this.size;
   let pizzaPrice = 0;
   this.price = 0;
-  switch(pizzaSize) {
+  switch (pizzaSize) {
     case "family":
       pizzaPrice = 21000;
       break;
@@ -15,6 +15,15 @@ Pizza.prototype.size = function() {
       pizzaPrice = 2750;
       break;
     case "medium":
-    pizzaPrice = 2500;
+      pizzaPrice = 2500;
       break;
   }
+  return (this.price += pizzaPrice);
+};
+
+Pizza.prototype.toppings = function () {
+  this.toppings.forEach((topping) => {
+    this.price += 100;
+  });
+  return this.price;
+};
