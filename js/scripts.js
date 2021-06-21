@@ -26,6 +26,14 @@ Pizza.prototype.calcToppings = function () {
   });
   return this.price;
 };
+
+let bg = $("#bg");
+let pizza = $("#pizza");
+
+window.addEventListener("scroll", function () {
+  let value = window.scrollY;
+});
+
 $(document).ready(function () {
   $("#pizzaForm").submit(function (event) {
     event.preventDefault();
