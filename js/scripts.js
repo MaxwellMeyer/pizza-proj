@@ -27,14 +27,24 @@ Pizza.prototype.calcToppings = function () {
   return this.price;
 };
 
-let bg = $("#bg");
-let pizza = $("#pizza");
+// let bg = $("#bg");
+// let pizza = $("#pizza");
 
-window.addEventListener("scroll", function () {
-  let value = window.scrollY;
-});
+// window.addEventListener("scroll", function () {
+//   let value = window.scrollY;
+//   bg.style.top = value * 0.5 + "px";
+//   pizza.style.top = -value * 0.15 + "px";
+// });
 
 $(document).ready(function () {
+  let bg = $("#bg");
+  let pizza = $("#pizza");
+
+  window.addEventListener("scroll", function () {
+    let value = window.scrollY;
+    bg.style.top = value * 0.5 + "px";
+    pizza.style.top = -value * 0.15 + "px";
+  });
   $("#pizzaForm").submit(function (event) {
     event.preventDefault();
     const pizzaToppings = [];
