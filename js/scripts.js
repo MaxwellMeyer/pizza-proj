@@ -1,5 +1,5 @@
-function Pizza(price, toppings, size) {
-  this.price = price;
+function Pizza(toppings, size) {
+  this.price = 0;
   this.toppings = toppings;
   this.size = size;
 }
@@ -36,7 +36,7 @@ $(document).ready(function () {
     $("input:checkbox[name=top]:checked").each(function () {
       pizzaToppings.push(parseInt($(this).val()));
     });
-    let food = new Pizza(0, pizzaToppings, pizzaSize);
+    let food = new Pizza(pizzaToppings, pizzaSize);
     food.calcSize();
     food.calcToppings();
     $("#pizzaCost").text(food.price);
