@@ -44,7 +44,6 @@ $(document).ready(function () {
     $(".jumbotron").fadeOut();
     $(".rsButton").fadeIn();
     $(".submit").fadeOut();
-    console.log(food);
   });
   $(".again").click(function (event) {
     event.preventDefault();
