@@ -21,7 +21,9 @@ The user will be able to build their own pizza using any unique combination of t
 ## Setup
 
 1. Follow link to my Github repo
-2. Alternatively, clone the repository from GH via [this link](), and open in browser.
+2. Alternatively, clone the repository from GH via [this link]()
+3. Navigate to the root directory of the newly cloned project
+4. Open the index.html file in the browser via live server
 
 ## Specifications:
 
