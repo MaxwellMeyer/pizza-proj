@@ -27,20 +27,92 @@ The user will be able to build their own pizza using any unique combination of t
 
 ## Specifications:
 
-- Describe: Pizza object constructor (Pizza())
-- Test: Create new pizza object
-- Expect: (new Pizza).toEqual(pizza1(price, toppings, size)).
+```
+Describe: Pizza object constructor (Pizza());
 
-- Describe: calcSize method for Pizza constructor (Pizza.prototype.calcSize())
-- Test: Should determine size cost based on inputted size
-- Expect: (pizza1.calcSize).toEqual(pizza1(500, toppings, medium)) for medium
-  (pizza1.calcSize).toEqual(pizza1(750, toppings, large)) for large
-  (pizza1.calcSize).toEqual(pizza1(1000, topping, family)) for family
+Test: "Should correctly initialize a new pizza object"
 
-- Describe: calcToppings method for Pizza constructor (Pizza.prototype.calcToppings())
-- Test: Should determine the cost of the selected toppings based on user input.
-- Expect: (pizza1.calcToppings).toEqual(pizza1(1500, [5], family )) for a family size with 5 toppings
-  (pizza1.calcToppings).toEqual(pizza1(950, [2], large)) for a large size with 2 toppings
+Code: let testPizza = new Pizza();
+
+Expect: testPizza.toEqual({price: undefined, toppings: undefined, size: undefined})
+
+```
+
+```
+
+ Describe: calcSize() method for Pizza objects (Pizza.prototype.calcSize());
+
+ Test: "Should determine size cost of a pizza based on pizza size input"
+
+ Code: let testPizza1 = new Pizza([], "medium");
+       testPizza1.calcSize();
+
+ Expect: testPizza1.toEqual({price: 2500, toppings: Array(0), size: "medium"})
+
+```
+
+```
+
+ Describe: calcSize() method for Pizza objects (Pizza.prototype.calcSize());
+
+ Test: "Should determine size cost of a pizza based on pizza size input"
+
+ Code: let testPizza2 = new Pizza([], "large");
+       testPizza2.calcSize();
+
+ Expect: testPizza2.toEqual({price: 2750, toppings: Array(0), size: "large"})
+
+```
+
+```
+
+ Describe: calcSize() method for Pizza objects (Pizza.prototype.calcSize());
+
+ Test: "Should determine size cost of a pizza based on pizza size input"
+
+ Code: let testPizza3 = new Pizza([], "family");
+       testPizza3.calcSize();
+
+ Expect: testPizza3.toEqual({price: 21000, toppings: Array(0), size: "family"})
+
+```
+
+```
+ Describe: calcToppings() method for Pizza objects (Pizza.prototype.calcToppings())
+
+ Test: "Should update the cost of the pizza object according to the quantity of selected toppings based on user input"
+
+ Code: let testPizza4 = new Pizza([1], "undefined");
+       testPizza4.calcToppings();
+
+ Expect: testPizza4.toEqual({price: 100, toppings: Array(1), size: "undefined"})
+
+```
+
+```
+ Describe: calcToppings() method for Pizza objects (Pizza.prototype.calcToppings())
+
+ Test: "Should update the cost of the pizza object according to the quantity of selected toppings based on user input"
+
+ Code: let testPizza5 = new Pizza([6], "undefined");
+       testPizza5.calcToppings();
+
+ Expect: testPizza5.toEqual({price: 600, toppings: Array(6), size: "undefined"})
+
+```
+
+```
+ Describe: use calcSize() and calcToppings() methods in conjunction to determine the total cost for Pizza objects (Pizza.prototype.calcSize(), Pizza.prototype.calcToppings())
+
+ Test: "Should determine the total cost of a pizza object based on both input size, and input toppings"
+
+ Code: let testPizza6 = new Pizza([5], "family");
+       testPizza6.calcSize();
+       testPizza6.calcToppings();
+
+ Expect: testPizza6.toEqual({price: 21500, toppings: Array(5), size: "family"})
+
+```
 
 ## Known Bugs
 
